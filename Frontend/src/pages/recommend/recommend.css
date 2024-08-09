@@ -1,0 +1,100 @@
+/* Container styling */
+
+.recommend-container {
+  /* Removed position: relative; */
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Input field styling */
+input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 500px; /* Adjust width as necessary */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  position: relative; /* Relative positioning to ensure dropdown aligns under it */
+  z-index: 5; /* Ensure input is above other elements */
+}
+
+input:focus {
+  border-color: #007BFF; /* Blue color for focused state */
+}
+
+/* Search results styling */
+.search-results {
+  list-style: none;
+  /* margin: 100,0,0,0; */
+  /* padding: 100,0,0,0; */
+  margin-top: 80px;
+  width: 100%;  /* Make the dropdown match the input width */
+  max-width: 500px;  /* Same width as the input field */
+  max-height: 300px;  /* Limit the height */
+  overflow-y: auto;  /* Add scroll if overflow */
+  background: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;  
+   /* top: calc(100% + 5px);  */
+  /* left: 0;  Align it to the left edge of the viewport */
+  z-index: 10;  /* You might need to adjust this based on your layout */
+  text-align: left;
+}
+
+.search-results li {
+  padding: 10px;
+  cursor: pointer;
+  color:white;
+  /* transition: background-color 0.2s; */
+}
+
+.search-results li:hover {
+  background-color: white; /* Light grey for hover effect */
+  color: black;
+  
+}
+
+/* Movie heading styling */
+.movie__heading {
+  font-size: 2.2rem;
+  color: #007BFF;  /* Blue color for heading */
+  margin-top: 0;  /* Added to position search results above */
+  margin-bottom: 10px;
+  position: relative;  /* Added for relative positioning */
+  z-index: 1;  /* Lower z-index to keep it behind the dropdown */
+  text-align: center;
+}
+
+/* Movie production styling */
+.movie__production {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  /* margin-top: calc(100px + 20px);   */
+  gap: 10px;
+  position: relative;  /* Added for relative positioning */
+  z-index: 1;  /* Lower z-index to keep it behind the dropdown */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Loading message styling */
+.loading {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
